@@ -17,7 +17,6 @@
     "lint": "eslint . --ext=.ts,.vue --fix",
     "typecheck": "pnpm --parallel typecheck",
     "prepare:module": "pnpm --filter @vue-final-modal/nuxt dev:prepare && pnpm --filter @vue-final-modal/nuxt prepack",
-    "postinstall": "pnpm build:vfm && pnpm prepare:module"
   },
   "dependencies": {
     "vue": "3.4.15"
