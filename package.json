@@ -14,7 +14,7 @@
     "test:vfm": "npm run --filter vue-final-modal cypress:run",
     "release:vfm": "npm run --filter vue-final-modal release",
     "lint": "eslint . --ext=.ts,.vue --fix",
-    "typecheck": "npm run --parallel typecheck",
+    "typecheck": "npm run --parallel typecheck"
   },
   "dependencies": {
     "vue": "3.4.15"
