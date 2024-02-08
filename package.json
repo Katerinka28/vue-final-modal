@@ -3,19 +3,20 @@
   "private": true,
   "version": "4.4.5",
   "scripts": {
-    "dev": "concurrently \"pnpm:dev:*\"",
-    "dev:docs": "pnpm --filter docs dev",
-    "build:docs": "pnpm --filter docs build",
-    "generate:docs": "pnpm --filter docs generate",
-    "dev:viteplay": "pnpm --filter viteplay dev",
-    "build:viteplay": "pnpm --filter viteplay build",
-    "dev:vfm": "pnpm --filter vue-final-modal dev",
-    "build:vfm": "pnpm --filter vue-final-modal build",
-    "test:vfm": "pnpm --filter vue-final-modal test",
-    "coverage:vfm": "pnpm --filter vue-final-modal coverage",
-    "release:vfm": "pnpm --filter vue-final-modal release",
+    "dev": "concurrently \"npm run:dev:docs\" \"npm run:dev:viteplay\"",
+    "dev:docs": "npm run --filter docs dev",
+    "build:docs": "npm run --filter docs build",
+    "generate:docs": "npm run --filter docs generate",
+    "dev:viteplay": "npm run --filter viteplay dev",
+    "build:viteplay": "npm run --filter viteplay build",
+    "dev:vfm": "npm run --filter vue-final-modal dev",
+    "build:vfm": "npm run --filter vue-final-modal build",
+    "test:vfm": "npm run --filter vue-final-modal cypress:run",
+    "release:vfm": "npm run --filter vue-final-modal release",
     "lint": "eslint . --ext=.ts,.vue --fix",
-    "typecheck": "pnpm --parallel typecheck"
+    "typecheck": "npm run --parallel typecheck",
+    "prepare:module": "npm run --filter @vue-final-modal/nuxt dev:prepare && npm run --filter @vue-final-modal/nuxt prepack",
+    "postinstall": "npm run build:vfm && npm run prepare:module"
   },
   "dependencies": {
     "vue": "3.4.15"
