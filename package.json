@@ -19,7 +19,7 @@
     "postinstall": "pnpm build:vfm && pnpm prepare:module"
   },
   "dependencies": {
-    "vue": "^3.2.45"
+    "vue": "3.4.15"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.1",
