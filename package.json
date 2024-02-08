@@ -15,8 +15,6 @@
     "release:vfm": "npm run --filter vue-final-modal release",
     "lint": "eslint . --ext=.ts,.vue --fix",
     "typecheck": "npm run --parallel typecheck",
-    "prepare:module": "npm run --filter @vue-final-modal/nuxt dev:prepare && npm run --filter @vue-final-modal/nuxt prepack",
-    "postinstall": "npm run build:vfm && npm run prepare:module"
   },
   "dependencies": {
     "vue": "3.4.15"
