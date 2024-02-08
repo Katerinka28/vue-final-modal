@@ -15,8 +15,7 @@
     "coverage:vfm": "pnpm --filter vue-final-modal coverage",
     "release:vfm": "pnpm --filter vue-final-modal release",
     "lint": "eslint . --ext=.ts,.vue --fix",
-    "typecheck": "pnpm --parallel typecheck",
-    "prepare:module": "pnpm --filter @vue-final-modal/nuxt dev:prepare && pnpm --filter @vue-final-modal/nuxt prepack",
+    "typecheck": "pnpm --parallel typecheck"
   },
   "dependencies": {
     "vue": "3.4.15"
